@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忘年パタパタ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <div class="patapatitle" id="忘">
+            <p>忘</p>
+        </div>
+        <div class="patapatitle" id="年">
+            <p>年</p>
+        </div>
+        <div class="patapatitle" id="パ">
+            <p>パ</p>
+        </div>
+        <div class="patapatitle" id="タ">
+            <p>タ</p>
+        </div>
+        <div class="patapatitle" id="パ2">
+            <p>パ</p>
+        </div>
+        <div class="patapatitle" id="タ2">
+            <p>タ</p>
+        </div>
+    </div>
+    <div id="topic-container">
+        <div id="flip-card">
+            <div class="flip-card-front">どんな一年でしたか？</div>
+            <div class="flip-card-back"></div>
+        </div>
+        <button id="flip-button">話題をめくる</button>
+    </div>
+
+    <div id="countdown">
+        <p>今年の残り時間</p>
+        <div class="countdown-part-wrap">
+            <div class="countdown-part">
+                <div id="days-tens" class="digit"></div>
+                <div id="days-units" class="digit"></div>
+                <p>Day</p>
+            </div>
+            <div class="countdown-part">
+                <div id="hours-tens" class="digit"></div>
+                <div id="hours-units" class="digit"></div>
+                <p>Hour</p>
+            </div>
+            <div class="countdown-part">
+                <div id="minutes-tens" class="digit"></div>
+                <div id="minutes-units" class="digit"></div>
+                <p>Min</p>
+            </div>
+            <div class="countdown-part">
+                <div id="seconds-tens" class="digit"></div>
+                <div id="seconds-units" class="digit"></div>
+                <p>Sec</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

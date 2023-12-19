@@ -1,0 +1,171 @@
+body {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* タイトル */
+.title {
+    display: flex;
+    flex-direction: row;
+    /* 子要素を縦方向に並べる */
+    align-items: center;
+    /* 水平方向の中央揃え */
+    justify-content: space-around;
+    margin: 10vh 3vw;
+}
+
+.patapatitle {
+    display: flex;
+    align-items: center;
+    /* 水平方向の中央揃え */
+    justify-content: center;
+    /* 垂直方向の中央揃え */
+    font-size: 40px;
+    font-weight: bold;
+    color: #eb6100;
+    text-align: center;
+    background-color: #ffdda9;
+    width: 60px;
+    height: 60px;
+}
+
+/* 通常→反転 */
+@keyframes rotateXAnimation {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(-180deg);
+    }
+}
+
+.rotating {
+    animation: rotateXAnimation 1s forwards;
+}
+
+/* 反転→通常 */
+@keyframes rotateXAnimation2 {
+    from {
+        transform: rotateX(-180deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+.rotating2 {
+    animation: rotateXAnimation2 1s forwards;
+}
+
+
+/* 話題 */
+#topic-container {
+    display: flex;
+    flex-direction: column;
+    /* 子要素を縦方向に並べる */
+    align-items: center;
+    /* 水平方向の中央揃え */
+    justify-content: center;
+    /* 垂直方向の中央揃え */
+    margin: 0;
+    /* デフォルトのマージンをリセット */
+}
+
+#flip-button {
+    color: #fff;
+    background-color: #eb6100;
+    font-size: 20px;
+    border-radius: 100vh;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    margin-top: 15px;
+}
+
+#flip-button:active {
+    background-color: #cc5500;
+    /* 暗くする */
+    transform: scale(0.95);
+    /* 少し縮小する */
+}
+
+
+#topic-container {
+    perspective: 1000px;
+}
+
+#flip-card {
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    background-color: #ffdda9;
+}
+
+.flip-card-back {
+    transform: rotateX(180deg);
+}
+
+.flip {
+    transform: rotateX(540deg);
+}
+
+/* カウントダウン */
+#countdown {
+    display: flex;
+    flex-direction: column;
+    /* 子要素を縦方向に並べる */
+    align-items: center;
+    /* 水平方向の中央揃え */
+    margin-top: 50px;
+}
+
+.countdown-part-wrap{
+    display: flex;
+    flex-direction: row;
+    /* 子要素を縦方向に並べる */
+    align-items: center;
+    /* 水平方向の中央揃え */
+}
+
+.countdown-part{
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+}
+
+.countdown-part p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #eb6100;
+    text-align: center;
+    background-color: #ffdda9;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    transition: 0.2s;
+}
