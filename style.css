@@ -1,6 +1,7 @@
 body {
     max-width: 600px;
     margin: auto;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* タイトル */
